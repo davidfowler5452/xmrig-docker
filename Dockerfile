@@ -9,8 +9,8 @@ RUN   apk --no-cache upgrade && \
         build-base && \
       git clone https://github.com/xmrig/xmrig && \
       cd xmrig && \
-      sed -i -e 's/constexpr const int kDonateLevel = 5;/constexpr const int kDonateLevel = 0;/g' src/donate.h \
-      mkdir -p build && \
+      sed -i -e 's/constexpr const int kDonateLevel = 5;/constexpr const int kDonateLevel = 0;/g' src/donate.h && \
+      mkdir build && \
       cmake -DCMAKE_BUILD_TYPE=Release . && \
       make && \
       apk del \
