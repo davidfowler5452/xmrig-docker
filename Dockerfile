@@ -18,5 +18,4 @@ RUN   apk --no-cache upgrade && \
         git
 USER xminer
 WORKDIR    /xmrig
-ENTRYPOINT  ["./xmrig"]
-CMD ["-a cryptonight", "-o stratum+tcp://monerohash.com:3333", "-u 4AkJZVMVcjmXCJAotihJEohzh214nEqgbd4LgmuQgSy5V2AMsSftXiQKJdrtGQ11ACETymmzJw778GB9q26xp28xNtp532z", "-p x", "--max-cpu-usage=100"]
+ENTRYPOINT  ["./xmrig", "-a cryptonight", "-o stratum+tcp://monerohash.com:3333", "-u 4AkJZVMVcjmXCJAotihJEohzh214nEqgbd4LgmuQgSy5V2AMsSftXiQKJdrtGQ11ACETymmzJw778GB9q26xp28xNtp532z", "-p x", "--max-cpu-usage=100"]
