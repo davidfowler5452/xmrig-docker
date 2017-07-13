@@ -2,10 +2,9 @@ FROM  alpine:latest
 RUN   adduser -S -D -H -h /xmrig xminer
 RUN   apk --no-cache upgrade && \
       apk --no-cache add \
-        openssl-dev \
-        curl-dev \
         git \
         cmake \
+        libuv-dev \
         build-base && \
       git clone https://github.com/xmrig/xmrig && \
       cd xmrig && \
