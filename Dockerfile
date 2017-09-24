@@ -6,6 +6,7 @@ RUN   apk --no-cache upgrade && \
         cmake \
         libuv-dev \
         build-base && \
+      cd / && \
       git clone https://github.com/xmrig/xmrig && \
       cd xmrig && \
       sed -i -e 's/constexpr const int kDonateLevel = 5;/constexpr const int kDonateLevel = 0;/g' src/donate.h && \
